@@ -8,7 +8,17 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
+import { get15DaysWeatherByArea } from '@/api/index'
+
+onMounted(async () => {
+    const res = await get15DaysWeatherByArea({
+        apiKey: import.meta.env.VITE_APP_KEY as string,
+        area: '深圳市',
+    })
+    console.log(res)
+})
 </script>
 
 <style>

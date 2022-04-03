@@ -8,7 +8,9 @@
         "preview": "vite preview",
         "lint": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx",
         "prettier": "prettier --write .",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "build:dev": "vite build --mode development",
+        "build:pro": "vite build --mode production"
     },
     "dependencies": {
         "axios": "^0.26.1",
